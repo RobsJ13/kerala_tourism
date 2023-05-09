@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* div{
+    border: 2px black solid;
+    background-color: greenyellow;
+} */
+
+#login{
+    height: 38rem;
+}
+.navbar{
+    /* border:2px red solid; */
+    float:right;  
+    padding-left: 10rem;
+}
+.container{
+    background-image: url(/d3_pathanamthitta1.jpg);
+    height:38rem;
+    background-size: cover;
+    width:100%;
+    border:2px white solid;
+}
+#title2{
+    text-align: center; 
+    padding-left:7%;
+}

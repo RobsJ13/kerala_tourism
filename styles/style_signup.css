@@ -1,0 +1,29 @@
+.card-body{
+    border:6px rgb(44, 98, 44) solid;
+    border-radius: 30px;
+    border-width: 7px;
+}
+
+.sign_up{ 
+    background-image: url(/bg3.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#form{
+    border: 3px rgb(69, 195, 82) solid; 
+    border-radius: 20px;
+    padding: 20px;
+} 
+
+.navbar{
+    /* border:2px red solid; */
+    float:right;  
+    padding-left: 10rem;
+}
+
+#title2{
+    text-align: center; 
+    padding-left:7%;
+}
