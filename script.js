@@ -36,6 +36,7 @@ function validate(){
         error2.innerText="Valid format";
         error2.style.background='white';
         error2.style.color='green';
+        
     }
     else{
         error2.innerText="Password should contain Minimum 8 characters, at least one uppercase, and one lower case, must contain at least one number";
@@ -60,6 +61,8 @@ let regex_e2=/^([A-Za-z0-9\-#._]+)@([A-Za-z0-9\-]+).([a-z]{2,3})(.[a-z]{2,3})?$/
 let regex_m2=/(^([6-9][0-9]{2}[.-]?[0-9]{3}[.-]?[0-9]{4})$)/;  //(^([6-9][0-9]{9})$)
 //let regx_m2=/(?=^([6-9][0-9]{2}[.-][0-9]{3}[.-][0-9]{4})$)(?=(^([6-9][0-9]{9})$)))/;
 let regex_p2=/(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.{8,})/;
+let regex_sp=/(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9])(?=.{10,})/
+let regex_md=/(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9])(?=.{8,})/
 var s_flag=false;
 var s_flag1=true;
 var s_flag2=true;
@@ -85,6 +88,21 @@ function validate2(){
         p_error.innerText="Valid format";
         p_error.style.background='white';
         p_error.style.color='green';
+        if(regex_sp.test(p2.value)){
+            sp.innerText="Strong Password";
+            sp.style.background='green';
+            sp.style.color='black'; 
+        }
+        else if(regex_md.test(p2.value)){
+            sp.innerText="Medium Password";
+            sp.style.background='yellow';
+            sp.style.color='black'; 
+        }
+        else{
+            sp.innerText="Weak Password";
+            sp.style.background='red';
+            sp.style.color='black'; 
+            }
     }
     else{
         p_error.innerText="Password should contain Minimum 8 characters, at least one uppercase, and one lower case, must contain at least one number";
